@@ -45,7 +45,7 @@ void main() async {
         );
 
         final apiClient = ApiClient(
-          baseUrl: 'http://localhost:8080',
+          baseUrl: 'http://localhost:8080/',
           idTokenStream: authenticationRepository.idToken,
           refreshIdToken: authenticationRepository.refreshIdToken,
           appCheckTokenStream: appCheck.onTokenChange,

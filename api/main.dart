@@ -144,10 +144,10 @@ Future<HttpServer> run(Handler handler, InternetAddress ip, int port) async {
 }
 
 String get _appId {
-  final value = Platform.environment['FB_APP_ID'];
-  if (value == null) {
-    throw ArgumentError('FB_APP_ID is required to run the API');
-  }
+  final value = "top-dash-dev-9e22b";
+  // if (value == null) {
+  //   throw ArgumentError('FB_APP_ID is required to run the API');
+  // }
   return value;
 }
 

@@ -1,9 +1,9 @@
 {
   "projects": {
-    "default": "top-dash-dev"
+    "default": "top-dash-dev-9e22b"
   },
   "targets": {
-    "top-dash-dev": {
+    "top-dash-dev-9e22b": {
       "hosting": {
         "app_dev": [
           "a16e0900d-fe2c-3609-b43c-87093e447b78"

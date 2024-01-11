@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="development" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="additionalArgs" value="--dart-define=ENCRYPTION_KEY=$ENCRYPTION_KEY --dart-define=ENCRYPTION_IV=$ENCRYPTION_IV --dart-define=RECAPTCHA_KEY=$RECAPTCHA_KEY --dart-define=APPCHECK_DEBUG_TOKEN=$APPCHECK_DEBUG_TOKEN --dart-define ALLOW_PRIVATE_MATCHES=true" />
+    <option name="additionalArgs" value="--dart-define=ENCRYPTION_KEY=X9YTchZdcnyZTNBSBgzj29p7RMBAIubD --dart-define=ENCRYPTION_IV=FxC21ctRg9SgiXuZ --dart-define=RECAPTCHA_KEY=6LeorUUpAAAAAK5KqO-k7ad70-WAFL6fuEHKCfu4 --dart-define=APPCHECK_DEBUG_TOKEN=FAB6D536-5C82-4D7B-86C8-F97301E5F880 --dart-define ALLOW_PRIVATE_MATCHES=true" />
     <option name="buildFlavor" value="development" />
     <option name="filePath" value="$PROJECT_DIR$/lib/main_development.dart" />
     <method v="2" />

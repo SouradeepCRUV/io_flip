@@ -63,12 +63,12 @@ class AuthenticationRepository {
   ///
   /// If the sign in fails, an [AuthenticationException] is thrown.
   Future<void> signInAnonymously() async {
-    try {
-      final userCredential = await _firebaseAuth.signInAnonymously();
-      _userController.add(userCredential.toUser);
-    } on Exception catch (error, stackTrace) {
-      throw AuthenticationException(error, stackTrace);
-    }
+    // try {
+    //   final userCredential = await _firebaseAuth.signInAnonymously();
+    //   _userController.add(userCredential.toUser);
+    // } on Exception catch (error, stackTrace) {
+    //   throw AuthenticationException(error, stackTrace);
+    // }
   }
 
   /// Disposes any internal resources.

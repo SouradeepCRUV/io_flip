@@ -26,19 +26,27 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+if (kDebugMode) {
+  print('0');
+}
   unawaited(
     bootstrap(
       (firestore, firebaseAuth, appCheck) async {
         await appCheck.activate(
           webRecaptchaSiteKey: const String.fromEnvironment('RECAPTCHA_KEY'),
         );
+        if (kDebugMode) {
+          print('RECAPTCHA');
+        }
         await appCheck.setTokenAutoRefreshEnabled(true);
 
         final authenticationRepository = AuthenticationRepository(
           firebaseAuth: firebaseAuth,
         );
 
+        if (kDebugMode) {
+          print('1');
+        }
         final apiClient = ApiClient(
           baseUrl: 'https://top-dash-dev-api-synvj3dcmq-uc.a.run.app',
           idTokenStream: authenticationRepository.idToken,
@@ -47,13 +55,30 @@ void main() async {
           appCheckToken: await appCheck.getToken(),
         );
 
+        if (kDebugMode) {
+          print('Api');
+        }
         await authenticationRepository.signInAnonymously();
+        if (kDebugMode) {
+          print('Sign in');
+        }
         await authenticationRepository.idToken.first;
-
+        if (kDebugMode) {
+          print('Token');
+        }
         final currentScript =
-            await apiClient.scriptsResource.getCurrentScript();
+            await apiClient.scriptsResource.getCurrentScript(); //problem: XMLHttpRequest error.
+        if (kDebugMode) {
+          print('Script');
+        }
         final gameScriptMachine = GameScriptMachine.initialize(currentScript);
 
+        if (kDebugMode) {
+          print('Initialize');
+        }
+        if (kDebugMode) {
+          print('0');
+        }
         return App(
           settingsPersistence: LocalStorageSettingsPersistence(),
           apiClient: apiClient,
